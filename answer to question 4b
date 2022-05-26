@@ -1,0 +1,6 @@
+SELECT manufacturers.*, count(items.manufacturer_id) as number_of_products        
+from manufacturers
+left join items
+on (manufacturers.id = items.manufacturer_id)
+group by
+    manufacturers.id
